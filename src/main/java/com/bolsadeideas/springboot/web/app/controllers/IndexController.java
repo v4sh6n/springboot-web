@@ -40,6 +40,10 @@ public class IndexController {
 	@RequestMapping("/listar")
 	public String listar(Model model) {
 		List<Usuario> usuarios = new ArrayList<>();
+		usuarios.add(new Usuario("Nombre","Apellido","email"));
+		usuarios.add(new Usuario("Johna","Doe","email2"));
+		usuarios.add(new Usuario("Jane","Doe","email3"));
+		usuarios.add(new Usuario("Tornado","Roe","email4"));
 		model.addAttribute("titulo", "Listado de usuarios: ");
 		model.addAttribute("usuarios", usuarios);
 		
